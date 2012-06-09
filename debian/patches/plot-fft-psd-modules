@@ -1,0 +1,44 @@
+--- a/gr-utils/src/python/gr_plot_fft_c.py
++++ b/gr-utils/src/python/gr_plot_fft_c.py
+@@ -20,7 +20,7 @@
+ # Boston, MA 02110-1301, USA.
+ # 
+ 
+-import gr_plot_fft
++from gnuradio.gr_plot_fft import  gr_plot_fft
+ 
+ def main():
+     parser = gr_plot_fft.setup_options()
+--- a/gr-utils/src/python/gr_plot_fft_f.py
++++ b/gr-utils/src/python/gr_plot_fft_f.py
+@@ -20,7 +20,7 @@
+ # Boston, MA 02110-1301, USA.
+ # 
+ 
+-import gr_plot_fft
++from gnuradio.gr_plot_fft import gr_plot_fft
+ 
+ def main():
+     parser = gr_plot_fft.setup_options()
+--- a/gr-utils/src/python/gr_plot_psd_c.py
++++ b/gr-utils/src/python/gr_plot_psd_c.py
+@@ -21,7 +21,7 @@
+ # 
+ 
+ from optparse import OptionParser
+-import gr_plot_psd
++from gnuradio.gr_plot_psd import gr_plot_psd
+ 
+ # This is a wrapper program for gr_plot_psd specifically for complex data
+ 
+--- a/gr-utils/src/python/gr_plot_psd_f.py
++++ b/gr-utils/src/python/gr_plot_psd_f.py
+@@ -21,7 +21,7 @@
+ # 
+ 
+ from optparse import OptionParser
+-import gr_plot_psd
++from gnuradio.gr_plot_psd import gr_plot_psd
+ 
+ # This is a wrapper program for gr_plot_psd specifically for floating point data
+ 

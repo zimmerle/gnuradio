@@ -1,0 +1,11 @@
+--- a/gr-fcd/examples/CMakeLists.txt
++++ b/gr-fcd/examples/CMakeLists.txt
+@@ -26,7 +26,7 @@
+ 
+ INSTALL(TARGETS
+     fcd_nfm_rx
+-    DESTINATION ${GR_PKG_DATA_DIR}/examples/fcd
++    DESTINATION ${GR_RUNTIME_DIR}
+     COMPONENT "fcd_examples"
+ )
+ 

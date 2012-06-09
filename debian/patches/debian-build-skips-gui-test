@@ -1,0 +1,27 @@
+--- a/gr-qtgui/python/run_tests.in
++++ b/gr-qtgui/python/run_tests.in
+@@ -4,7 +4,9 @@
+ # 2nd parameter is absolute path to component build directory
+ # 3rd parameter is path to Python QA directory
+ 
+-@top_builddir@/run_tests.sh \
+-    @abs_top_srcdir@/gr-qtgui \
+-    @abs_top_builddir@/gr-qtgui \
+-    @srcdir@
++# Debian build environment has no display to run a gui test
++#@top_builddir@/run_tests.sh \
++#    @abs_top_srcdir@/gr-qtgui \
++#    @abs_top_builddir@/gr-qtgui \
++#    @srcdir@
++exit 0
+--- a/gr-qtgui/python/CMakeLists.txt
++++ b/gr-qtgui/python/CMakeLists.txt
+@@ -41,6 +41,7 @@
+         ${CMAKE_BINARY_DIR}/gr-qtgui/swig
+     )
+     set(GR_TEST_TARGET_DEPS volk gruel gnuradio-core gnuradio-qtgui)
+-    GR_ADD_TEST(${py_qa_test_name} ${PYTHON_EXECUTABLE} ${py_qa_test_file})
++    # Debian packages build without X server to connect to...
++    #GR_ADD_TEST(${py_qa_test_name} ${PYTHON_EXECUTABLE} ${py_qa_test_file})
+ endforeach(py_qa_test_file)
+ endif(ENABLE_TESTING)
