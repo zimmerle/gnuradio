@@ -1,4 +1,4 @@
-gnuradio (3.6.0+git20120602.43406b3-0buntu0) precise; urgency=low
+gnuradio (3.6.1+git20120602.43406b3-0) precise; urgency=low
 
   * From b7e2c8ba2cba5014fa2de28dc48d742b943406b3 git commit.
 
